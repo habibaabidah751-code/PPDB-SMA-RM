@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPDB Online |SMA Raudlatul Muta'allimin 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="form-container">
+        <header>
+            <h1>Formulir Pendaftaran Peserta Didik Baru</h1>
+            <p>Tahun Ajaran 2025/2026</p>
+        </header>
+
+        <div class="progress-bar">
+            <div class="step active" id="step-1">1<span class="step-label">Data Siswa</span></div>
+            <div class="progress-line"></div>
+            <div class="step" id="step-2">2<span class="step-label">Data Orang Tua</span></div>
+            <div class="progress-line"></div>
+            <div class="step" id="step-3">3<span class="step-label">Jalur & Berkas</span></div>
+            <div class="progress-line"></div>
+            <div class="step" id="step-4">4<span class="step-label">Konfirmasi</span></div>
+        </div>
+
+        <form id="ppdb-form">
+            <fieldset class="form-step active-step">
+                <legend>Langkah 1: Data Diri Calon Siswa</legend>
+                <div class="input-group">
+                    <label for="nama_lengkap">Nama Lengkap (sesuai Ijazah)</label>
+                    <input type="text" id="nama_lengkap" name="nama_lengkap" placeholder="Contoh: Muhammad Rizky" required>
+                </div>
+                <div class="input-group">
+                    <label for="nisn">Nomor Induk Siswa Nasional (NISN)</label>
+                    <input type="number" id="nisn" name="nisn" placeholder="Masukkan 10 digit NISN" required>
+                </div>
+                <div class="input-group">
+                    <label for="nik">Nomor Induk Kependudukan (NIK)</label>
+                    <input type="number" id="nik" name="nik" placeholder="Masukkan 16 digit NIK" required>
+                </div>
+                <div class="input-group">
+                    <label for="tempat_lahir">Tempat Lahir</label>
+                    <input type="text" id="tempat_lahir" name="tempat_lahir" required>
+                </div>
+                <div class="input-group">
+                    <label for="tanggal_lahir">Tanggal Lahir</label>
+                    <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+                </div>
+                <div class="input-group">
+                    <label for="jenis_kelamin">Jenis Kelamin</label>
+                    <select id="jenis_kelamin" name="jenis_kelamin" required>
+                        <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn next-btn">Selanjutnya &rarr;</button>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-step">
+                <legend>Langkah 2: Data Orang Tua / Wali</legend>
+                <div class="input-group">
+                    <label for="nama_ayah">Nama Ayah</label>
+                    <input type="text" id="nama_ayah" name="nama_ayah" required>
+                </div>
+                 <div class="input-group">
+                    <label for="nama_ibu">Nama Ibu</label>
+                    <input type="text" id="nama_ibu" name="nama_ibu" required>
+                </div>
+                 <div class="input-group">
+                    <label for="no_telepon_ortu">Nomor Telepon/WA Orang Tua</label>
+                    <input type="tel" id="no_telepon_ortu" name="no_telepon_ortu" placeholder="Contoh: 08123456789" required>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn prev-btn">&larr; Sebelumnya</button>
+                    <button type="button" class="btn next-btn">Selanjutnya &rarr;</button>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-step">
+                <legend>Langkah 3: Jalur Pendaftaran & Berkas</legend>
+                <p class="info-text">Pilih jalur pendaftaran sesuai ketentuan Kemendikbudristek.</p>
+                <div class="input-group">
+                    <label>Jalur Pendaftaran</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="jalur_pendaftaran" value="Zonasi" required> Zonasi</label>
+                        <label><input type="radio" name="jalur_pendaftaran" value="Afirmasi"> Afirmasi</label>
+                        <label><input type="radio" name="jalur_pendaftaran" value="Prestasi"> Prestasi</label>
+                        <label><input type="radio" name="jalur_pendaftaran" value="Perpindahan Orang Tua"> Perpindahan Tugas Orang Tua/Wali</label>
+                    </div>
+                </div>
+                 <div class="input-group">
+                    <label for="asal_sekolah">Asal Sekolah (SMP/Mts)</label>
+                    <input type="text" id="asal_sekolah" name="asal_sekolah" required>
+                </div>
+                <div class="input-group">
+                    <label for="file_kk">Upload Kartu Keluarga (KK) - PDF/JPG</label>
+                    <input type="file" id="file_kk" name="file_kk" accept=".pdf,.jpg,.jpeg,.png" required>
+                </div>
+                <div class="input-group">
+                    <label for="file_ijazah">Upload Scan Ijazah/SKL - PDF/JPG</label>
+                    <input type="file" id="file_ijazah" name="file_ijazah" accept=".pdf,.jpg,.jpeg,.png" required>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn prev-btn">&larr; Sebelumnya</button>
+                    <button type="button" class="btn next-btn">Selanjutnya &rarr;</button>
+                </div>
+            </fieldset>
+            
+            <fieldset class="form-step">
+                <legend>Langkah 4: Konfirmasi Data</legend>
+                <div id="summary">
+                    </div>
+                <div class="input-group checkbox-group">
+                    <input type="checkbox" id="konfirmasi_data" name="konfirmasi_data" required>
+                    <label for="konfirmasi_data">Saya menyatakan bahwa semua data yang saya isikan adalah benar dan dapat dipertanggungjawabkan.</label>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn prev-btn">&larr; Sebelumnya</button>
+                    <button type="submit" class="btn submit-btn">Kirim Pendaftaran</button>
+                </div>
+            </fieldset>
+        </form>
+        
+        <div id="success-message" style="display: none;">
+            <h2>✅ Pendaftaran Berhasil!</h2>
+            <p>Terima kasih telah mendaftar di SMA Raudlatul Muta'allimin.</p>
+            <p>Silakan cek email Anda secara berkala untuk informasi selanjutnya mengenai status pendaftaran Anda.</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
